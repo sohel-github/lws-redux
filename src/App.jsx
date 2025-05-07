@@ -57,16 +57,16 @@ const App = () => {
 
   return (
     <div className='flex flex-col justify-center items-center h-screen p-5'>
-      <Posts />
       {counters.map((counter)=> (
         <Counter 
-          key={counter.id} 
-          counter={counter}
-          onIncrement={()=>handleIncrement(counter.id)} 
-          onDecrement={()=>handleDecrement(counter.id)} 
+        key={counter.id} 
+        counter={counter}
+        onIncrement={()=>handleIncrement(counter.id)} 
+        onDecrement={()=>handleDecrement(counter.id)} 
         />
       ))}
       <Total total={totalValue} />
+      <Posts />
     </div>
   )
 }
